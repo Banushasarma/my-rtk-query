@@ -5,10 +5,6 @@ const DeleteProduct = ({ productId }) => {
   const [deleteProduct, { data, error, isLoading }] =
     useDeleteProductMutation();
 
-  const handleDelete = async () => {
-    await deleteProduct(productId);
-  };
-
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Ohhh Nooo we got an error</div>;
 
